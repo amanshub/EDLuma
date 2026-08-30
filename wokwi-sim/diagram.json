@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "author": "Aman",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -148.9, "left": 81.4, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir", "top": -236, "left": 223.02, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr",
+      "top": -83.2,
+      "left": -152.8,
+      "attrs": { "lux": "500", "threshold": "2.5", "rl10": "50", "gamma": "0.7" }
+    },
+    { "type": "wokwi-dht22", "id": "dht", "top": -230.1, "left": 340.2, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -205.2,
+      "left": 186.2,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "esp:D2", "pir:OUT", "green", [] ],
+    [ "esp:D34", "ldr:AO", "yellow", [] ],
+    [ "esp:D4", "dht:SDA", "blue", [] ],
+    [ "esp:3V3", "pir:VCC", "red", [] ],
+    [ "esp:3V3", "ldr:VCC", "red", [] ],
+    [ "esp:3V3", "dht:VCC", "red", [] ],
+    [ "esp:GND.1", "pir:GND", "gray", [] ],
+    [ "esp:GND.1", "ldr:GND", "gray", [] ],
+    [ "esp:GND.1", "dht:GND", "gray", [] ],
+    [ "esp:D5", "led1:A", "green", [] ],
+    [ "esp:GND.1", "led1:C", "gray", [] ]
+  ],
+  "dependencies": {}
+}
