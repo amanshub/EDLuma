@@ -18,6 +18,7 @@ The goal is to **notice meaningful changes, check in gently, and help bridge mom
 ## 🌐 Live Prototype
 
 ### [Try Ed / LUMA →](https://web-app-mu-black-25.vercel.app/)
+### [See Ed / LUMA Circuit →](https://wokwi.com/projects/473662751376889857)
 
 ---
 
